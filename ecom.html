@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+    <link rel="stylesheet" href="ecom.css">
+    <title>Ecommerce Website</title>
+</head>
+<body>
+    <div id="loading">
+        <img id="loading-image" src="images/loader/Ajaxloader.gif" alt="Loading..." />
+    </div>
+    <div class="myContainer">
+    <div id="container">
+        <div id="header">
+            <h2>Feuaterd Products</h2>
+        </div>
+        <!-- categories -->
+        <div class="catergoriesDiv">
+            <a class="categoryBtn" id="allBtn">All</a>
+            <a class="categoryBtn" id="smartPhonesbtn">SmartPhones</a>
+            <a class="categoryBtn" id="laptopsBtn">Laptops</a>
+            <a class="categoryBtn" id="fragrancesBtn">Fragrances</a>
+            <a class="categoryBtn" id="skinCaresBtn">Skincare</a>
+            <a class="categoryBtn" id="groceriesBtn">Groceries</a>
+            <a class="categoryBtn" id="homeDecorBtn">Home-decoration</a>
+        </div>
+        <!-- Sort by section -->
+        <div class="sortByDiv">
+            <span class="selectionTitle">Sort By</span>
+            <select class="select" id="sortBySelect">
+                <option value="default">Default</option>
+                <option value="l2h">Price: Low-High</option>
+                <option value="h2l">Price: High-Low</option>
+                <option value="rating">Rating</option>
+                <option value="discount">Discount</option>
+            </select>
+        </div>
+        <!-- items container -->
+        <div class="items">
+            <!-- <div class="item">
+                <div class="itemImage">
+                    <img
+                    src="${data[i].images[0]}">
+                    <span class="discountPercentage">${data[i].discountPercentage} % OFF</span>
+                </div>
+                <div class="itemInfo">
+                    <p><span class="title">${data[i].title}</span></p>
+                    <p class="descriptionP">Description:<span class="description">${data[i].description}</span></p>
+                    <p><span class="price">${data[i].price} $</span></p>
+                    <p>
+                        Rating:<span class="rating">${data[i].rating}</span>
+                        <i class="fa-solid fa-star gold"></i>
+                    </p>
+                    <p>Stock:<span class="stock">${data[i].stock}</span></p>
+                    <p>Brand:<span class="brand">${data[i].brand}</span></p>
+                    <p>Category:<span class="category">${data[i].category}</span></p>
+                </div>
+                <div class="addToCartDiv">
+                    <button type="button" class="ATCBtn">Add To Cart</button>
+                </div>
+            </div> -->
+        </div>
+        <!-- info div on clicking info button on item -->
+        <div id="infoDiv">
+            <div class="imageInfoDiv">
+                <img class="imageInfo" src="">
+                <button id="closeInfoBtn"><i class="fa-solid fa-x"></i></button>
+            </div>
+            <div class="fullInfo">
+                <p><b>Product:</b> <span class="titleInfo"></span></p>
+                <p><b>Description:</b> <span class="descriptionInfo"></span></p>
+                <p><b>Price:</b> <span class="priceInfo"></span> $</p>
+                <p><b>Discount:</b> <span class="discountInfo"></span>% OFF</p>
+                <p>
+                    <b> Rating:</b> <span class="ratingInfo"></span>
+                    <i class="fa-solid fa-star gold"></i>
+                </p>
+                <p><b>Stock:</b> <span class="stockInfo"></span></p>
+                <p><b>Brand:</b> <span class="brandInfo"></span></p>
+                <p><b>Category:</b> <span class="categoryInfo"></span></p>
+            </div>
+        </div>
+    </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-migrate-3.4.0.min.js"></script>
+    <script src="https://kit.fontawesome.com/97348c31f0.js" crossorigin="anonymous"></script>
+    <script src="ecom.js"></script>
+</body>
+</html>

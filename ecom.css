@@ -1,0 +1,297 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.myContainer {
+  margin: auto;
+}
+/* below class apply on rating favIcon */
+.gold {
+  color: #ffd700;
+}
+#loading {
+  position: fixed;
+  display: block;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  text-align: center;
+  opacity: 1;
+  background-color: white;
+  z-index: 99;
+}
+#loading-image {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 150x;
+  height: 150px;
+  z-index: 100;
+  transform: translate(-50%, -50%);
+}
+#container {
+  padding: 15px;
+}
+#header {
+  text-align: center;
+  margin: 15px 0px;
+}
+/*catagory buttons and it's div style */
+.catergoriesDiv {
+  text-align: center;
+  margin: 15px 0;
+}
+a.categoryBtn {
+  display: inline-block;
+  font-size: 14px;
+  margin: 10px;
+  padding: 10px;
+  border: none;
+  color: grey;
+  background-color: white;
+  cursor: pointer;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  position: relative;
+  transition: all 0.2s ease-in-out;
+}
+a.categoryBtn::after {
+  content: "";
+  height: 2px;
+  width: 0%;
+  position: absolute;
+  top: 110%;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #555;
+  font-weight: bold;
+  transition: all 0.2s ease-in-out;
+}
+a.categoryBtn:hover {
+  color: black;
+}
+a.categoryBtn:hover::after {
+  width: 100%;
+}
+/* below class are applied on category buttons after onclick event */
+.active-btn {
+  color: black !important;
+}
+.active-btn::after {
+  width: 100% !important;
+}
+/*--------- sort by */
+.sortByDiv {
+  margin: 15px 0px;
+  text-align: right;
+}
+.selectionTitle {
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin: 10px;
+  font-size: 14px;
+}
+.select {
+  margin: 10px;
+  border: none;
+  color: grey;
+  cursor: pointer;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  outline: none;
+  font-size: 12px;
+}
+.select option {
+  font-size: 12px;
+}
+/* items container*/
+.items {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin: 15px 0px;
+}
+/* item and it's elements */
+.item {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  padding: 10px;
+  margin: 10px;
+  width: 30%;
+  transition: all 0.2s ease-in;
+  cursor: pointer;
+}
+.item:hover {
+  scale: 1.05;
+}
+.itemImage {
+  text-align: center;
+  width: 100%;
+  position: relative;
+}
+.itemImage img {
+  width: 70%;
+  height: 150px;
+}
+.itemImage span.discountPercentage {
+  background-color: #258f25;
+  padding: 10px;
+  color: white;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+}
+.itemInfo p {
+  padding: 5px 0px;
+}
+.title {
+  font-size: 16px;
+  font-weight: bold;
+}
+span {
+  font-size: 14px;
+}
+.price {
+  color: red;
+}
+.itemButtonsDiv {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.ATCBtn,
+.infoBtn {
+  padding: 10px;
+  background-color: 4bc74b;
+  background-color: #258f25;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  cursor: pointer;
+  opacity: 0.5;
+  transition: all 0.3s ease;
+}
+.ATCBtn:hover,
+.infoBtn:hover {
+  opacity: 1;
+}
+/* <p> with below classes in products are hidden for now  */
+.descriptionP {
+  display: none;
+}
+.stockP {
+  display: none;
+}
+.brandP {
+  display: none;
+}
+.categoryP {
+  display: none;
+}
+/* infodiv */
+#infoDiv {
+  display: none;
+  width: 40%;
+  background-color: white;
+  position: fixed;
+  top: 5%;
+  left: 30%;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  transition: all 2s linear;
+}
+.imageInfoDiv {
+  width: 100%;
+  text-align: center;
+  padding: 10px;
+  position: relative;
+}
+#closeInfoBtn {
+  position: absolute;
+  right: 0;
+  top: 0;
+  cursor: pointer;
+  font-size: 20px;
+  border: none;
+}
+.imageInfoDiv img {
+  width: 70%;
+  height: 150px;
+}
+.fullInfo {
+  margin: 10px;
+}
+.fullInfo p {
+  padding: 5px;
+}
+/* responsive */
+@media screen and (max-width: 992px) {
+  .item {
+    margin: 10px;
+    width: 30%;
+  }
+  #infoDiv {
+    width: 50%;
+    top: 5%;
+    left: 25%;
+  }
+}
+@media only screen and (max-width: 991px) {
+  #loading-image {
+    width: 120px;
+    height: 120px;
+  }
+}
+@media screen and (max-width: 768px) {
+  #loading-image {
+    width: 100px;
+    height: 100px;
+  }
+  .item {
+    width: 45%;
+  }
+  #infoDiv {
+    width: 70%;
+    top: 5%;
+    left: 15%;
+  }
+}
+@media screen and (max-width: 576px) {
+  #loading-image {
+    width: 80px;
+    height: 80px;
+  }
+  .item {
+    width: 90%;
+  }
+  .itemImage img {
+    height: 150px;
+  }
+}
+/* media query for myContainer- to adjust maxwidth */
+@media screen and (min-width: 576px) {
+  .myContainer {
+    max-width: 540px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .myContainer {
+    max-width: 720px;
+  }
+}
+@media screen and (min-width: 992px) {
+  .myContainer {
+    max-width: 960px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .myContainer {
+    max-width: 1140px;
+  }
+}
+@media screen and (min-width: 1400px) {
+  .myContainer {
+    max-width: 1320px;
+  }
+}
